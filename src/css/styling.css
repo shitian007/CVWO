@@ -1,0 +1,88 @@
+label {
+    margin: 10px;
+}
+
+.navbar {
+    background-color: lightblue;
+}
+
+.navbar-brand {
+    color: darkslategray;
+    font-size: 30px;
+}
+
+.jumbotron {
+    margin-top: 80px;
+}
+
+.jumbo-header {
+    text-align: center;
+    font-size: 60px;
+    font-family: Impact, Charcoal, sans-serif;
+    color: lightseagreen;
+}
+
+.side-header {
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Charcoal, sans-serif;
+    color: lightblue;
+}
+
+.text {
+    width: 300px;
+    height: 25px;
+}
+
+.search-btn {
+    background: lightslategrey;
+    border-radius: 3px;
+}
+
+.navbar-hello {
+    font-size: 20px;
+}
+
+.login-fields {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.carousel {
+    width: 80%; 
+    margin: auto;
+}
+
+.carousel .item {
+    min-height: 300px;
+}
+
+.carousel-caption {
+    padding-bottom: 200px;
+    color: grey;
+}
+
+.justified {
+    display: flex;
+    justify-content: center;
+}
+
+.writepost {
+    padding-top: 120px;
+    margin: auto;
+}
+
+textarea {
+    resize: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.posttitle {
+    font-size: 40px;
+    margin: 20px;
+}
+
+.postcontent {
+    margin-top: 30px;
+}
