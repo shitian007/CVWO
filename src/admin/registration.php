@@ -17,6 +17,9 @@
         if (empty($regUsername) || empty($regPassword) || empty($regPasswordConfirm) || empty($regUsername)) {
             header("Location: ../home.php?error=empty#registerForm");
             exit();
+        } else if ((strlen($regUsername) < 8) || strlen($regPassword) < 8) {
+            header("Location: ../home.php?error=short#registerForm");
+            exit();
         } else if ($regPassword != $regPasswordConfirm) {
             header("Location: ../home.php?error=nomatch#registerForm");
             exit();
