@@ -15,6 +15,7 @@
     <?php
     	displayTitle($conn);
     ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styling.css">
 </head>
@@ -30,14 +31,14 @@
                 
 				<ul class="list-inline">
 					<li style="margin-right: 100px; vertical-align: top; padding-top: 15px">
-						<span><form action="#" method="GET" class="form-inline search-bar">
+						<span><form action="searchpage.php" method="GET" class="form-inline search-bar">
 							<input class="text" type="text" name="search" placeholder="Search for posts (coming soon)">
-							<input class="search-btn" type="submit" name="searchBtn" value="Search">
+							<input class="search-btn" type="submit" name="searchBtn">
 						</form></span>
 					</li>
 					<li>
 						<?php 
-                			echo '<div class="navbar-hello">Hello! ' . $_SESSION['username'] . '</div>'; 
+                			echo "<div style='font-size: 20px;'>Hello! " . $_SESSION['username'] . '</div>'; 
                 		?> 
 						<form action="home.php" method="POST">
                     		<input type="submit" name="logoutBtn" value="LOG OUT"></button>

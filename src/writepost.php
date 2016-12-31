@@ -10,17 +10,33 @@ include("loggednavbar.php");
 	<form method="POST" action="admin/newpost.php">
 		<div>
 			<span>Title: </span>
-			<input style="width: 500px; margin: 20px;" type="text" name="title" placeholder="Post Title">
+			<input style="width: 500px; margin: 20px;" type="text" id="title" name="title" placeholder="Post Title">
 		</div>
-		<textarea rows="20" cols="100" name="postContent" placeholder="Your content"></textarea>
+		<textarea rows="20" cols="100" id="postContent" name="postContent" placeholder="Your content"></textarea>
 		
 		<div style="text-align: right; padding-top: 10px">
-			<input type="submit" name="savepostBtn" value="Save Entry">
-			<input type="submit" name="publishpostBtn" value="Publish Post">
+			<input onclick="return checkEmpty()" type="submit" name="savepostBtn" value="Save Entry">
+			<input onclick="return checkEmpty()" type="submit" name="publishpostBtn" value="Publish Post">
 		</div>
 
 	</form>
 	</div>
 </div>
+
+<script type="text/javascript">
+	// Check if textarea field are empty
+	function checkEmpty() {
+		if ((document.getElementById("title").value).replace(/\s+/, "").length < 1) {
+			alert("Please give your post a title!");
+			return false;
+		} else if ((document.getElementById("postContent").value).replace(/\s+/, "").length < 1) {
+			alert("Please do not leave the content blank!");
+			return false;
+		} else {
+			return true;
+		}
+	}	
+</script>
+
 </body>
 </html>

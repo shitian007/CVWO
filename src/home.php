@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styling.css">
 </head>
 	
-<body>
+<body onload="register()">
 	
 	<nav class="navbar navbar-fixed-top">
 		<div class="container">
@@ -111,12 +111,12 @@
 					<tr>
 						<td><label for="registerPasswordConfirm">Confirm Password:</label></td>
 						<td><input type="password" name="registerPasswordConfirm" id="registerPasswordConfirm"></td>
-					</tr
+					</tr>
 						
 					<tr>
 						<td><label for="registerEmail">Email:</label></td>
 						<td><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="registerEmail" id="registerEmail"></td>
-					</tr
+					</tr>
 
 					<tr>
 						<td>
@@ -124,7 +124,7 @@
 								regError();
 							?>	
 						</td>
-						<td><input type="submit" onclick="return register()" name="registerBtn" id="registerBtn" value="Register"></td>
+						<td><input onclick="return register()" type="submit" name="registerBtn" id="registerBtn" value="Register"></td>
 					</tr>			
 				</table>
 			</form>
@@ -138,8 +138,8 @@
 		$(document).ready(function() {
 			$("#featuresCarousel").carousel({ 
 				interval: 1500});
-			});
 		});
 	</script>
+
 </body>
 </html>
